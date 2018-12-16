@@ -254,7 +254,7 @@ Mat multi_color_multhreshold_otsu(Mat image, vector<int> color_amount, ofstream&
 }
 
 int main(int argc, char** argv) {
-    string image_name = "/Users/IIMaximII/Downloads/Максу/17-01-29-09-39-51-036_deco.jpg";
+    string image_name = "sample.jpg";
     Mat image = imread(image_name, 0);
     
     ofstream data_file;
