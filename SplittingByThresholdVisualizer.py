@@ -45,6 +45,11 @@ for current_row in content:
         if eval(current_board_to_pos)[0] == left_board:
             pos_y = boards_to_pos[current_board_to_pos][1] - 1
             pos_x = boards_to_pos[current_board_to_pos][0] - step / -pos_y
+            for num, curr_pos in pos.items():
+                if curr_pos == boards_to_pos[current_board_to_pos]:
+                    g.add_edge(num, current_row_number)
+                    g.add_edge(num, current_row_number - 1)
+                    break
             del boards_to_pos[current_board_to_pos]
             curr_labels_size = len(labels)
             break    
