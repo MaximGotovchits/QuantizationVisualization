@@ -4,7 +4,7 @@ import networkx as nx
 import math
 %matplotlib inline
 
-with open("/Users/IIMaximII/Classic Otsu/build/Debug/output_data.txt") as f:
+with open("output_data.txt") as f:
     content = f.readlines()
 content = [x.strip() for x in content]
 
@@ -62,4 +62,4 @@ for current_row in content:
 plt.figure(figsize=(10,10))
 nx.draw(G=g, pos=pos, node_size=200, font_size=5, with_labels=False)
 nx.draw_networkx_labels(G=g,pos=pos,labels=labels,font_size=8)
-plt.savefig("result.png", format="PNG")
+plt.savefig("SplittingByThresholdVisualizer.png", format="PNG")
